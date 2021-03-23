@@ -1,0 +1,8 @@
+FROM ubuntu
+COPY smi2.s ./
+COPY smi2_1.cpp ./
+RUN chmod ugo+x smi2.s
+RUN chmod ugo+x smi2_1.cpp
+RUN apt-get update
+RUN apt-get install -y build-essential
+RUN apt-get install -y gcc-multilib
