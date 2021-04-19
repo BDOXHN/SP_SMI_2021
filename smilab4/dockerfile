@@ -1,0 +1,10 @@
+FROM ubuntu
+COPY smi4_1.cpp ./
+COPY smi4_2.cpp ./
+RUN chmod ugo+x smi4_1.cpp
+RUN chmod ugo+x smi4_2.cpp
+RUN apt-get update
+RUN apt-get install -y build-essential
+RUN apt-get install -y gcc-multilib
+RUN apt-get install -y g++-multilib
+RUN apt-get install -y nmap
