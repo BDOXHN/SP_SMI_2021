@@ -1,0 +1,8 @@
+FROM ubuntu
+COPY smi5_2.cpp ./
+RUN chmod ugo+x smi5_2.cpp
+RUN apt-get update
+RUN apt-get install -y build-essential
+RUN apt-get install -y gcc-multilib
+RUN apt-get install -y g++-multilib
+RUN apt-get install -y nmap
