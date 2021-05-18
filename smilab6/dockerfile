@@ -1,0 +1,10 @@
+FROM ubuntu
+COPY smi6_sem.cpp ./
+COPY smi6_mut.cpp ./
+RUN chmod ugo+x smi6_sem.cpp
+RUN chmod ugo+x smi6_mut.cpp
+RUN apt-get update
+RUN apt-get install -y build-essential
+RUN apt-get install -y gcc-multilib
+RUN apt-get install -y g++-multilib
+RUN apt-get install -y nmap
